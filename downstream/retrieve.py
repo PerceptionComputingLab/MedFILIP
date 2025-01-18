@@ -6,11 +6,11 @@ from models import VLM
 device = torch.device("cuda:{}".format(4) if torch.cuda.is_available() else "cpu")
 net = VLM()
 net.to(device)
-ckpt_path = "/Share8/lxj/MedFILIP/train/pretrained/model.pt"
+ckpt_path = "~/MedFILIP/train/pretrained/model.pt"
 checkpoints = torch.load(ckpt_path, map_location=device)
 net.load_state_dict(checkpoints["network"])
 net.eval()
-dataset = np.load("/Share8/lxj/MedFILIP/FT/mimic_retrieve.npy", allow_pickle=True)
+dataset = np.load("~/MedFILIP/FT/mimic_retrieve.npy", allow_pickle=True)
 text_datas = []
 image_datas = []
 for data in dataset:

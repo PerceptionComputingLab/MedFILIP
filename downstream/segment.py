@@ -499,12 +499,12 @@ class Trainer(object):
 from models import UNetWithResnet50Encoder
 
 
-df_path = "/Share8/lxj/data/siim-acr-pneumothorax/stage_1_train_images.csv"
-data_folder = "/Share8/lxj/data/siim-acr-pneumothorax"
+df_path = "~/data/siim-acr-pneumothorax/stage_1_train_images.csv"
+data_folder = "~/data/siim-acr-pneumothorax"
 
 
 device = torch.device("cuda:{}".format(6) if torch.cuda.is_available() else "cpu")
-ckpt_path = "/Share8/lxj/MedFILIP/train/pretrained/image_model.pt"
+ckpt_path = "~/MedFILIP/train/pretrained/image_model.pt"
 checkpoints = torch.load(ckpt_path, map_location="cpu")
 model = UNetWithResnet50Encoder(weights=checkpoints["image_model"]).to(device)
 model = UNetWithResnet50Encoder().to(device)

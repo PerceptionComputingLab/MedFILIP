@@ -53,7 +53,7 @@ if __name__ == "__main__":
         "Lung volumes remain low. There are innumerable bilateral scattered small pulmonary nodules which are better demonstrated on recent CT. Mild pulmonary vascular congestion is stable. The cardiomediastinal silhouette and hilar contours are unchanged. Small pleural effusion in the right middle fissure is new. There is no new focal opacity to suggest pneumonia. There is no pneumothorax.",
     ]
 
-    api_key = "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"
+    api_key = ""
     sim_chatgpt = SimChatGPT(api_key=api_key)
     print(sim_chatgpt.ask())
     reports_path = "./reports/" + args.group + "/reports.npy"

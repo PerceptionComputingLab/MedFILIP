@@ -701,7 +701,7 @@ def concat_npy():
 
 if __name__ == "__main__":
     # Set the root directory to the MIMIC-CXR dataset file path
-    root_dir = "/home/lxj/data/physionet.org/files/mimic-cxr-jpg/2.0.0/files/"
+    root_dir = "~/data/physionet.org/files/mimic-cxr-jpg/2.0.0/files/"
 
     # Call the post_process function to post-process the data
     post_process(root_dir)

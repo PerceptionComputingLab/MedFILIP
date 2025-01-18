@@ -528,8 +528,8 @@ if __name__ == "__main__":
     )
 
     # Load pretrained tokenizer and model
-    tokenizer = AutoTokenizer.from_pretrained("/home/lxj/.cache/all-mpnet-base-v2/")
-    similarity_model = AutoModel.from_pretrained("/home/lxj/.cache/all-mpnet-base-v2/")
+    tokenizer = AutoTokenizer.from_pretrained("~/.cache/all-mpnet-base-v2/")
+    similarity_model = AutoModel.from_pretrained("~/.cache/all-mpnet-base-v2/")
 
     # Move similarity model to the specified device (CPU or GPU)
     similarity_model.to(device)

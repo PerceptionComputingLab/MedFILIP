@@ -86,11 +86,11 @@ pretrain = args.pretrain
 
 
 if dataset == "chest14":
-    datas = np.load("/Share8/lxj/data/chest14_train.npy", allow_pickle=True)
+    datas = np.load("~/data/chest14_train.npy", allow_pickle=True)
 elif dataset == "pneumonia":
-    datas = np.load("/Share8/lxj/data/pneumonia_train.npy", allow_pickle=True)
+    datas = np.load("~/data/pneumonia_train.npy", allow_pickle=True)
 elif dataset == "vinbigdata":
-    datas = np.load("/Share8/lxj/data/vinbigdata_train.npy", allow_pickle=True)
+    datas = np.load("~/data/vinbigdata_train.npy", allow_pickle=True)
 train_dataset = CXR(datas, portion)
 print(train_dataset.__len__())
 train_dataloader = DataLoader(
